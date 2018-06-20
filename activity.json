@@ -5,7 +5,8 @@
     "option1":"4",
     "option2":"1",
     "option3":"2",
-    "option4":"3"
+    "option4":"3",
+    "tip":"A resposta é um número par."
     },
     {
     "question":"De que cor é o céu?",
