@@ -1,0 +1,21 @@
+/*Barra de progresso*/
+
+
+/*Corpo da pergunta*/
+.card{
+	width: 80%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card-image{
+	width: 70% !important;
+	height: auto;
+}
+
+/*Botões de ajuda: */
+.btn-floating{
+	padding: 40px;
+}
+/*Alternativas*/
