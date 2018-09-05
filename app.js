@@ -1,16 +1,54 @@
 //pulos restantes
-var skip=10;
+var skip=2;
 //cartas restantes
 var cards=2;
 //ja usou as cartas este turno?
 var cardThisTurn;
 
 var sorteados = [];
-//var sorteioQuestao = [];
+
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount=1;
 var maxQuestions=5;
+
+//habilita o contador de tempo
+/*
+window.onload = function() {
+    var minute = 0;
+    var sec = 5;
+    var elem = 0;
+    setInterval(function() {
+        document.getElementById("timer").innerHTML = sec;
+        //elem.style.width = elem + "%";
+        sec--;
+        if (sec < 0) {
+            sec=5;
+            populate();
+            //minute--;
+            //sec = 60;
+            if (minute == 0) {
+                //minute = 2;
+            }
+        }
+    }, 1000);
+}*/
+
+//preenche a barra de carregamento
+window.onload =function() {
+    var elem = document.getElementById("timer");   
+    var width = 0;
+    setInterval(function () {
+        if (width >= 100) {
+            width = 0;
+            //clearInterval(id);
+            populate();
+        } else {
+          width++; 
+          elem.style.width = width + '%'; 
+        }
+      }, 90);
+}
 
 //carrega a questao na tela
 function populate(){
@@ -19,9 +57,10 @@ function populate(){
     if(questionCount>maxQuestions){
         showScores();
     }else{
-        //habilita todos as alternativas desativados
+        //habilita todos as alternativas desativadas
         for(var i=0;i<4;i++){
             document.getElementById("btn"+i).disabled = false;
+            document.getElementById("btn"+i).className = "col s12 m12";
         }
         cardThisTurn=false;
         //sorteia e mostra a questao
@@ -32,7 +71,7 @@ function populate(){
         
         //mostra a imagem(se houver)
         var element=document.getElementById("image");
-        element.innerHTML=quiz.getQuestionIndex().src=image;
+        element.href=quiz.getQuestionIndex().image;
         
         //mostra as alternativas
         var choices = quiz.getQuestionIndex().choices;
@@ -42,6 +81,7 @@ function populate(){
             guess("btn"+i,choices[i]);
         };
         showProgress();
+
     }
 };
 
@@ -79,18 +119,20 @@ function cardQuestion(){
         cards--;
         cardThisTurn=true;
         var sortCard=[];
-        for(var i=0;i<2;i++){
-            //sorteia duas alternativas erradas e as desativa
+        var wrongQuestions=2
+        for(var i=0;i<wrongQuestions;i++){
             var number = Math.floor(Math.random()*4); //escolher um numero ao acaso
-            while(sortCard.indexOf(number)>=0 || quiz.getQuestionIndex().answer==quiz.getQuestionIndex().choices[number]){  //enquanto o numero já existir, escolher outro
+            while(sortCard.indexOf(number)>=0 || quiz.getQuestionIndex().answer==quiz.getQuestionIndex().choices[number]){  //enquanto o numero já existir ou a alternativa escolhida estiver correta, escolher outro
                 number = Math.floor(Math.random()*4);
             }
             sortCard.push(number); //adicionar este numero à array de numeros sorteados para futura referência
             document.getElementById("btn"+number).disabled = true;
+            document.getElementById("btn"+number).className = "card-panel disabled";
         }
     }
     if(cards==0){
         document.getElementById("cards").disabled = true;
+        document.getElementById("cards").className="btn-floating btn-large disabled";
     }
     showProgress();
     //document.getElementsByClassName("buttons").disabled = false;
@@ -122,6 +164,7 @@ function skipQuestion(){
     //desabilita o botao, caso nao hajam pulos restantes
     if(skip==0){
         document.getElementById("skip").disabled = true;
+        document.getElementById("skip").className ="btn-floating btn-large disabled";
     }
     showProgress();
 };

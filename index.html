@@ -32,7 +32,7 @@
       <!-- Fim do card da pergunta: -->
       <div class="row">
         <div class="progress col s12 m12" style="height: 20px;">
-          <div class="determinate" style="width: 25%; height: auto;"></div>
+          <div class="determinate" id="timer" style="width: 25%; height: auto;"></div>
         </div>
       </div>
 
@@ -40,28 +40,28 @@
       <!-- Ajuda do professor: -->
       <div class="row center-align">
         <div class="col s3 m3">
-          <a class="btn-floating btn-large waves-effect waves-light blue">
+          <a id="" onclick="" class="btn-floating btn-large waves-effect waves-light blue">
             <i class="material-icons">face</i>
           </a>
         </div>
 
         <!-- Ajuda do grupo: -->
         <div class="col s3 m3">
-          <a class="btn-floating btn-large waves-effect waves-light blue">
+          <a id="" onclick="" class="btn-floating btn-large waves-effect waves-light blue">
             <i class="material-icons">account_circle</i>
           </a>
         </div>
 
         <!-- Pular pergunta: -->
-        <div id="skip" onclick="skipQuestion()" class="col s3 m3">
-          <a class="btn-floating btn-large waves-effect waves-light blue">
+        <div class="col s3 m3">
+          <a id="skip" onclick="skipQuestion()" class="btn-floating btn-large waves-effect waves-light blue">
             <i class="material-icons">hot_tub</i>
           </a>
         </div>
 
         <!-- Eliminar alternativas: -->
-        <div id="cards" onclick="cardQuestion()" class="col s3 m3">
-          <a class="btn-floating btn-large waves-effect waves-light blue">
+        <div class="col s3 m3">
+          <a id="cards" onclick="cardQuestion()" class="btn-floating btn-large waves-effect waves-light blue">
             <i class="material-icons">hotel</i>
           </a>
         </div>
@@ -71,59 +71,65 @@
       <!-- Alternativas -->
       <div class="row">
         <!-- Alternativa 1:-->
-        <a href="#">
-          <div id="btn0" class="col s12 m12">
+        
+          <div id="btn0" class="col s6 m6">
+              <a href="#">
             <div class="card hoverable blue-grey darken-1">
               <div class="card-content white-text">
                 <span id="choice0" class="card-title"></span>
               </div>
                 
             </div>
+          </a>
           </div>
-        </a>
+        
       </div>
         <!-- Alternativa 2: -->
-      <div class="row">
-        <a href="#">  
-          <div id="btn1" class="col s12 m12">
+        <div class="row">
+         
+          <div id="btn1" class="col s6 m6">
+              <a href="#"> 
             <div class="card hoverable blue-grey darken-1">
               <div class="card-content white-text">
                 <span id="choice1" class="card-title"></span>
               </div>
               
             </div>
+          </a>
           </div>
-        </a>
-      </div>
+        
+        </div>
         <!-- Alternativa 3: -->
       <div class="row">
-        <a href="#">
-          <div id="btn2" class="col s12 m12">
+        
+          <div id="btn2" class="col s6 m6">
+              <a href="#">
             <div class="card hoverable blue-grey darken-1">
               <div class="card-content white-text">
                 <span id="choice2" class="card-title"></span>
               </div>
               
             </div>
+          </a>
           </div>
-        </a>
+        
       </div>
         <!-- Alternativa 4: -->
       <div class="row">
-        <a href="#">
-          <div id="btn3" class="col s12 m12">
+        
+          <div id="btn3" class="col s6 m6">
+              <a href="#">
             <div class="card hoverable blue-grey darken-1">
               <div class="card-content white-text">
                 <span id="choice3" class="card-title"></span>
               </div>
               
             </div>
+          </a>
           </div>
-        </a>
+        
       </div>
       
-    
-    
     </div>
     <!-- Footer: 
     <footer class="page-footer">
