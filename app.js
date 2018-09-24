@@ -1,7 +1,7 @@
 //pulos restantes
-var skip=2;
+var skip = 2;
 //cartas restantes
-var cards=2;
+var cards = 2;
 //ja usou as cartas este turno?
 var cardThisTurn;
 
@@ -9,8 +9,14 @@ var sorteados = [];
 
 var order;
 //contador de questoes e numero maximo de questoes
-var questionCount=1;
-var maxQuestions=5;
+var questionCount = 1;
+var maxQuestions = 7;
+
+//level do game
+var level = 0;
+
+//tamanho da barra de tempo
+var width = 0;
 
 //habilita o contador de tempo
 /*
@@ -35,34 +41,43 @@ window.onload = function() {
 }*/
 
 //preenche a barra de carregamento
-window.onload =function() {
+window.onload = function() {
     var elem = document.getElementById("timer");   
-    var width = 0;
+    
     setInterval(function () {
+        document.getElementById("timer").innerHTML = width;
         if (width >= 100) {
             width = 0;
             //clearInterval(id);
+            questionCount++;
             populate();
         } else {
           width++; 
-          elem.style.width = width + '%'; 
+          elem.style.width = width/3 + '%'; 
         }
-      }, 90);
+      }, 1000);
 }
 
 //carrega a questao na tela
 function populate(){
     //se o quiz acabou, mostra o placar
-    //if(quiz.isEnded()){
     if(questionCount>maxQuestions){
         showScores();
     }else{
+        //carrega o nivel da questao
+        if(questionCount % 6 == 0){
+            sorteados.length = 0;   //limpa o array de numeros sorteados
+            level++;
+        }
+        quiz = new Quiz(fase[level]);
+
         //habilita todos as alternativas desativadas
         for(var i=0;i<4;i++){
             document.getElementById("btn"+i).disabled = false;
-            document.getElementById("btn"+i).className = "col s12 m12";
+            document.getElementById("btn"+i).className = "waves-effect waves-light btn-large";
         }
         cardThisTurn=false;
+
         //sorteia e mostra a questao
         order = criarUnico(quiz.questions.length-1);
         quiz.questionIndex=order;
@@ -81,7 +96,6 @@ function populate(){
             guess("btn"+i,choices[i]);
         };
         showProgress();
-
     }
 };
 
@@ -89,6 +103,7 @@ function populate(){
 function guess(id,guess){
     var button=document.getElementById(id);
     button.onclick=function(){
+        width = 0;
         questionCount++;
         quiz.guess(guess);
         populate();
@@ -108,7 +123,7 @@ function showProgress(){
 
 //mostra o placar ao final do game
 function showScores(){
-    var gameOver="<h1>Fim do jogo</h1>";
+    var gameOver="<h3>Fim do jogo!</h3>";
     gameOver+="<h2 id='score'> Você acertou "+quiz.score+" de "+maxQuestions+"</h2>";
     var element=document.getElementById("quiz");
     element.innerHTML=gameOver;
@@ -126,8 +141,8 @@ function cardQuestion(){
                 number = Math.floor(Math.random()*4);
             }
             sortCard.push(number); //adicionar este numero à array de numeros sorteados para futura referência
-            document.getElementById("btn"+number).disabled = true;
-            document.getElementById("btn"+number).className = "card-panel disabled";
+            //document.getElementById("btn"+number).disabled = true;
+            document.getElementById("btn"+number).className = "btn-large disabled";
         }
     }
     if(cards==0){
@@ -159,8 +174,10 @@ function skipQuestion(){
     if(skip>0){
         skip--;
         quiz.questionIndex++;
+        width = 0;
         populate();
     }
+
     //desabilita o botao, caso nao hajam pulos restantes
     if(skip==0){
         document.getElementById("skip").disabled = true;
@@ -169,8 +186,8 @@ function skipQuestion(){
     showProgress();
 };
 
-//armazena as perguntas do arquivo -questoes.js-
-var quiz = new Quiz(fase1);
+//armazena as perguntas do arquivo -questoes.js
+var quiz = new Quiz(fase[level]);
 
 populate();
 showProgress();
