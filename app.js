@@ -10,7 +10,7 @@ var sorteados = [];
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount = 1;
-var maxQuestions = 7;
+var maxQuestions = 20;
 
 //level do game
 var level = 0;
@@ -18,27 +18,8 @@ var level = 0;
 //tamanho da barra de tempo
 var width = 0;
 
-//habilita o contador de tempo
-/*
-window.onload = function() {
-    var minute = 0;
-    var sec = 5;
-    var elem = 0;
-    setInterval(function() {
-        document.getElementById("timer").innerHTML = sec;
-        //elem.style.width = elem + "%";
-        sec--;
-        if (sec < 0) {
-            sec=5;
-            populate();
-            //minute--;
-            //sec = 60;
-            if (minute == 0) {
-                //minute = 2;
-            }
-        }
-    }, 1000);
-}*/
+//placar
+var score = 0;
 
 //preenche a barra de carregamento
 window.onload = function() {
@@ -65,8 +46,10 @@ function populate(){
         showScores();
     }else{
         //carrega o nivel da questao
-        if(questionCount % 6 == 0){
-            sorteados.length = 0;   //limpa o array de numeros sorteados
+        if(questionCount % 10 == 1 && questionCount != 1){
+            sorteados = [];   //limpa o array de numeros sorteados
+            cards = 2;
+            skip = 2;
             level++;
         }
         quiz = new Quiz(fase[level]);
@@ -79,14 +62,14 @@ function populate(){
         cardThisTurn=false;
 
         //sorteia e mostra a questao
-        order = criarUnico(quiz.questions.length-1);
+        order = criarUnico(quiz.questions.length);
         quiz.questionIndex=order;
         var element=document.getElementById("question");
         element.innerHTML=quiz.getQuestionIndex().text;
         
         //mostra a imagem(se houver)
-        var element=document.getElementById("image");
-        element.href=quiz.getQuestionIndex().image;
+        var element=document.getElementById("image").src;
+        element=quiz.getQuestionIndex().image;
         
         //mostra as alternativas
         var choices = quiz.getQuestionIndex().choices;
@@ -105,6 +88,11 @@ function guess(id,guess){
     button.onclick=function(){
         width = 0;
         questionCount++;
+
+        if(quiz.getQuestionIndex().answer == guess){
+            score++;
+        }
+
         quiz.guess(guess);
         populate();
     }
@@ -116,15 +104,15 @@ function showProgress(){
     element.innerHTML="Questão "+ questionCount+" de "+maxQuestions;
 
     //element=document.getElementById("skip");
-    //element.innerHTML="Pular("+skip+")";
+    //element.innerHTML="Pula para a próxima questão. Restam " + skip;
     //element=document.getElementById("cards");
-    //element.innerHTML="Cartas("+cards+")";
+    //element.innerHTML="Remove duas alternativas erradas. Restam " + cards;
 };
 
 //mostra o placar ao final do game
 function showScores(){
     var gameOver="<h3>Fim do jogo!</h3>";
-    gameOver+="<h2 id='score'> Você acertou "+quiz.score+" de "+maxQuestions+"</h2>";
+    gameOver+="<h2 id='score'> Você acertou "+score+" de "+maxQuestions+"</h2>";
     var element=document.getElementById("quiz");
     element.innerHTML=gameOver;
 };
