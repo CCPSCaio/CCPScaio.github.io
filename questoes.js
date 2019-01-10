@@ -1,5 +1,6 @@
 var fase = [
 	[
+	//Fase 1
 	new Question("Briófitas e pteridófitas apresentam várias características em comum, mas também diferem em muitos aspectos.</br>Assinale a característica que pertence a apenas um desses grupos de plantas.", ["Crescer preferencialmente em solos úmidos e sombreados.", "Necessitar de água para reproduzir-se.", "Não ter flores, sementes e frutos.", "Ser portadora de tecidos de transporte."], "Ser portadora de tecidos de transporte.", ""),
 	new Question("Considere os seguintes organismos:</br>I.Algas</br>II.Briófitas</br>III.Pteridófitas</br>IV.Angiospermas</br>Gametas masculinos flagelados, que necessitam de água para encontrar os gametas femininos, são encontrados SOMENTE em:", ["I e II", "III e IV", "I, II e III", "I, III e IV"], "I e II", ""),
 	new Question("Neste ano o Jardim Botânico do Rio de Janeiro completa 200 anos de existência. Nele estão situados acervos de mais de 8.000 espécies de plantas nacionais e de várias partes do mundo. O Jardim Botânico foi expandido em 15.000m2 e as estufas das orquídeas, bromélias, cactos e das plantas insetívoras foram reformadas. Este último grupo de plantas, também conhecido como plantas carnívoras, chama muito a atenção por poder obter nutrientes dos animais que capturam e digerem. Entretanto, os organismos do Reino Plantae são classificados quanto a sua nutrição como autótrofos.</br>Os organismos autótrofos são aqueles que sintetizam moléculas orgânicas a partir de:", ["água e glicose", "substâncias orgânicas", "água e CO2", "água, O2 e proteínas"], "água e CO2",""),
@@ -10,9 +11,47 @@ var fase = [
 	new Question("As células vegetais jovens (meristemáticas) possuem inúmeras e pequenas bolsas membranosas que se fundem com o amadurecimento celular e em cujo interior encontra-se uma solução aquosa de proteínas, açúcares, íons inorgânicos, pigmentos hidrossolúveis e enzimas hidrolíticas.</br>Essas estruturas são:", ["os vacúolos.", "os lisossomos.", "os cloroplastos.", "o complexo de Golgi."], "os vacúolos.", ""),
 	new Question("No corpo de uma planta superior, qual é o tecido que apresenta numerosas mitoses, sendo sempre formado por células indiferenciadas?", ["parênquima paliçádico", "colênquima angular", "colênquima tabular", "meristema primário"], "meristema primário", ""),
 	new Question("Cortando-se, em forma de anel, a casca do caule de uma planta, a parte situada entre o corte e a raiz não é nutrida e morre.</br>O fluxo de seiva elaborada, com substâncias nutritivas, ocorre, das folhas para a raiz, no:", ["Xilema", "Meristema", "Floema", "Parênquima"], "Floema", ""),
-	new Question("São importantes tecidos de sustentação dos vegetais:", ["Floema e xilema.", "Súber e ritidoma.", "Colênquima e esclerênquima.", "Parênquima de reserva."], "Colênquima e esclerênquima.","")
+	new Question("São importantes tecidos de sustentação dos vegetais:", ["Floema e xilema.", "Súber e ritidoma.", "Colênquima e esclerênquima.", "Parênquima de reserva."], "Colênquima e esclerênquima.",""),
+	new Question("É característica típica das plantas terrestres vasculares e presença de folhas, que constituem expansões laminares verdes, especializadas na função fotossintética. No entanto, em ambientes áridos, encontram-se muitas vezes plantas sem evidência de folhas e com espinhos, como as cactáceas.</br>Esta característica tem relação com o habitat porque permite:", ["uma adaptação temporária até que o ambiente mude.", "um aumento da taxa de fotossíntese e de matéria orgânica formada.", "um aumento das velocidades de fotossíntese e transpiração.", "uma adaptação especial voltada à diminuição na perda d’água."], "uma adaptação especial voltada à diminuição na perda d’água.", ""),
+	new Question("Árvores adultas geralmente apresentam dificuldades para serem transplantadas de um lugar para outro. As palmeiras, pertencentes às monocotiledôneas, suportam melhor essa operação, devido ao seu sistema radicular, que é do tipo:", ["pivotante.", "fasciculado.", "escora.", "tabular."], "fasciculado.", ""),
+	new Question("Até cerca de 405 milhões de anos atrás, parece que a vida esteve limitada à água. A existência terrestre trouxe consigo sérios problemas como, por exemplo, o risco de dessecamento. Características que permitissem aos vegetais a redução de perda d’água em suas partes aéreas foram selecionadas positivamente pelo ambiente por facilitar a adaptação.</br>A economia de água é permitida pelo seguinte tecido vegetal:", ["súber.", "floema.", "colênquima.", "parênquima de assimilação."], "súber.", ""),
+	new Question("Plantas que têm caules suculentos, folhas reduzidas e sistema radicular extenso, estão adaptadas para viver em:", ["ambiente aquático.", "regiões semi-áridas.", "regiões úmidas.", "solo com alto teor salino."], "regiões semi-áridas.", ""),
+	new Question("A sobrevivência de qualquer espécie depende de sua capacidade de deixar descendentes. No decorrer do processo evolutivo as plantas desenvolveram inúmeras adaptações para a disseminação de frutos e sementes.</br>O fruto adaptado à dispersão pela água é o:", ["dente-de-leão.", "coco-da-baía.", "frutos de carrapicho.", "tomate."], "coco-da-baía.", ""),
+	new Question("O Parque Moscoso - marco histórico da cidade de Vitória - foi reformado e entregue à população capixaba. Passeando por suas alamedas, é comum encontrar troncos de árvores cobertos de musgos e seus galhos contendo samambaias, bromélias e orquídeas. Em alguns lugares, observam-se árvores com flores grandes, vermelhas, com néctar abundante e pouco viscoso.</br>Essas características das flores indicam que a polinização nessa espécie é feita:", ["pelo vento e pela água.", "por insetos e pela luz.", "pelo vento e por mamíferos.", "por aves e por insetos."], "por aves e por insetos.", ""),
+	new Question("Constituem exemplos de vegetais intermediários e foram as primeiras plantas a conquistar realmente o ambiente terrestre os(as):", ["pinheiros.", "musgos.", "samambaias.", "cactáceas."], "samambaias.", ""),
+	new Question("Os frutos de exportação devem chegar ao destino saudáveis e perfeitos. Para evitar seu amadurecimento antes de chegar ao destino, devem ser colocados em ambientes com baixa temperatura na presença de CO‚, evitando com isso a liberação do seguinte hormônio responsável pelo amadurecimento:", ["Auxina.", "Giberelina.", "Etileno.", "Citocinina."], "Etileno.", ""),
+	new Question("Auxinas são:", ["hormônios vegetais que controlam o desenvolvimento de frutos.", "proteínas contráteis encontradas em células animais.", "hormônios animais responsáveis pelos caracteres sexuais secundários.", "estruturas epidérmicas que controlam a entrada e saída de gases da planta."], "hormônios vegetais que controlam o desenvolvimento de frutos.", ""),
+	new Question("Frutas bem maduras e podres liberam um gás conhecido por:", ["Ácido Abscísico.", "Etileno.", "Ácido indolil-acético.", "Auxinas."], "Etileno.", ""),
+	new Question("Observe a equação simplificada representada a seguir:</br>6CO2 + 12H2O = C6H12O6) + 6H2O + 6O2</br>Esta reação ocorre nos organóides celulares denominados:", ["Mitocôndrias.", "Plastos.", "Ribossomos.", "Lisossomos."], "Plastos.", ""),
+	new Question("Fritz Went, trabalhando com coleóptile de aveia, verificou que este, quando iluminado por uma fonte de luz, apresentava um crescimento em curvatura, provocado pelo acúmulo de uma substância de crescimento no lado oposto à incidência da luz. Essa substância, responsável por essa resposta fototrópica, é:", ["Citocinína.", "Auxina.", "Giberelina.", "Etileno."], "Auxina.", ""),
+	new Question("Considerando as fases gametofítica e esporofítica dos vegetais, a primeira é predominante sobre a segunda apenas em:", ["Briófitas.", "Pteridófitas.", "Gimnospermas.", "Angiospermas."], "Briófitas.", ""),
+	new Question("Certa ocasião, alguns trechos de floresta Amazônica foram derrubados para dar lugar a grandes plantações de Castanha-do-Pará. Entretanto, a experiência foi um desastre.  Com a derrubada da floresta, a única espécie de abelha que visita as flores dessa árvore sumiu da região e, dessa forma, a produção de castanha não aconteceu.</br>Nesse caso, o processo afetado com a alteração do ambiente foi", ["o inquilinismo.", "o parasitismo.", "a polinização.", "a herbivoria."], "a polinização.", ""),
+	new Question("Em relação aos indivíduos do reino vegetal, pode-se afirmar que os(as):", ["briófitas não dependem diretamente da água para sua reprodução.", "flores dos pteridófitas são frutos modificados.", "gimnospermas possuem flores e frutos verdadeiros.", "frutos dos angiospermas se originam a partir do desenvolvimento do ovário."], "frutos dos angiospermas se originam a partir do desenvolvimento do ovário.", ""),
+	new Question("As angiospermas se distinguem de todas as outras plantas pelo fato de apresentarem", ["alternância de geração haplóide e diplóide.", "estômatos nas folhas.", "flores.", "sementes."], "flores.", ""),
+	new Question("Os frutos são órgãos vegetais que se desenvolvem a partir dos ovários, após a fecundação de seus óvulos.</br>Entretanto, pode ocorrer a formação do fruto, sem que tenha ocorrido fecundação. Como exemplo, temos:", ["a banana.", "o abacate.", "o caju.", "a acerola."], "a banana.", ""),
+	new Question("Considerando que quanto mais partes um vegetal possui, mais complexo é, podemos afirmar que, das alternativas a seguir, o vegetal mais complexo é:", ["o musgo.", "o abacateiro.", "a samambaia.", "o pinheiro."], "o abacateiro.", ""),
+	new Question("O aparecimento de sementes e frutos - estruturas que atuam como meios de propagação da espécie - justifica o grande sucesso adaptativo, ao meio terrestre, das plantas do grupo", ["pteridófitas.", "gimnospermas.", "briófitas.", "angiospermas."], "angiospermas.", ""),
+	new Question("Na evolução das angiospermas desenvolveu-se uma estrutura única entre os vegetais, que está certamente relacionada com a ampla distribuição geográfica do grupo. Trata-se:", ["do tubo polínico.", "dos grãos de pólen alados.", "das sementes.", "dos frutos."], "dos frutos.", ""),
+	new Question("As Angiospermas são as plantas de evolução mais recente, apresentando frutos, característica ligada a modificações no seguinte sistema presente nas plantas: ", ["Condutor.", "Radicular.", "Reprodutor.", "Fotossíntese."], "Reprodutor.", ""),
+	new Question("O pinhão, estrutura comestível produzida por pinheiros da espécie Araucaria angustifolia, corresponde a que parte da planta?", ["Cone (estróbilo) masculino repleto de pólen.", "Fruto simples sem pericarpo.", "Folha especializada no acúmulo de substâncias de reserva.", "Semente envolta por tegumento."], "Semente envolta por tegumento.", ""),
+	new Question("As briófitas são plantas que geralmente não atingem grandes alturas. Essa característica é determinada principalmente pelo fato de que:", ["as briófitas não apresentam vasos condutores.", "as briófitas reproduzem-se por alternância de gerações.", "as briófitas dependem da água para a reprodução.", "as briófitas não apresentam sementes nem frutos."], "as briófitas não apresentam vasos condutores.", ""),
+	new Question("As pteridófitas, diferentemente das briófitas, são plantas vasculares, ou seja, que possuem vasos condutores. Apesar dessa diferença, esses dois grupos ainda apresentam características em comum, tais como:", ["A presença de folhas e sementes.", "A dependência de água para a reprodução.", "A fase gametofítica dominante.", "A fase esporofítica dominante."], "A dependência de água para a reprodução.", ""),
+	new Question("Com relação ao ciclo reprodutivo das briófitas e pteridófitas, pode-se dizer que, em ambas,", ["os esporófitos são haplóides.", "a fase predominante é a diplóide.", "os gametófitos são fotossintetizantes e diplóides.", "é necessária água do meio para ocorrer a fecundação."], "é necessária água do meio para ocorrer a fecundação.", ""),
+	new Question("Nos musgos, uma divisão meiótica originará", ["anterozóides.", "esporos.", "oosferas.", "óvulos."], "esporos.", ""),
+	new Question("Das alternativas abaixo apenas uma caracteriza as briófitas. Assinale-a.", ["O transporte de substâncias é feito pelos vasos lenhosos, por todo o corpo do vegetal.", "Apresentam os órgãos de nutrição completamente diferenciados e com estrutura complexa.", "Esses vegetais produzem cones masculino e feminino, em indivíduos diferentes.", "Nesses vegetais, a planta adulta é representada pelo gametófito (geração haplóide)."], "Nesses vegetais, a planta adulta é representada pelo gametófito (geração haplóide).", ""),
+	new Question("Os musgos que crescem nos muros úmidos são", ["gametófitos de briófitas.", "gametófitos de pteridófitas.", "esporófitos de pteridófitas.", "esporófitos de gimnospermas."], "gametófitos de briófitas.", ""),
+	new Question("Na samambaia, cada esporo haplóide dá origem a um(a): ", ["anterídio.", "esporófito.", "arquegônio.", "gametófito."], "gametófito.", ""),
+	new Question("Dizemos que as gimnospermas conseguiram definitivamente conquistar o ambiente terrestre, uma vez que essas plantas não necessitam de água para a sua fecundação. Marque o nome da estrutura que permitiu essa independência da água.", ["Fruto.", "Flores.", "Sementes.", "Grãos de pólen."], "Grãos de pólen.", ""),
+	new Question("Na maioria das angiospermas, o fruto é uma estrutura formada a partir do desenvolvimento:", ["Do ovário;", "Do óvulo fecundado;", "Do zigoto;", "Da parede do epicarpo;"], "Do ovário;", ""),
+	new Question("As gimnospermas e angiospermas são consideradas plantas superiores, possuindo, em comum, todas as partes, com exceção de:", ["Semente", "Flor", "Fruto", "Endosperma"], "Fruto", ""),
+	new Question("As únicas plantas que formam sementes num estágio de sua vida são:", ["Gimnospermas e angiospermas", "Angiospermas e briófitas", "Gimnospermas e pteridófitas", "Briófitas e pteridófitas"], "Gimnospermas e angiospermas", ""),
+	new Question("As folhas são estruturas de formato, geralmente, laminar que são responsáveis por grande parte do processo de fotossíntese de uma planta. Observe as alternativas a seguir e marque aquela em que se encontra o nome dado à superfície achatada das folhas:", ["pecíolo.", "limbo.", "bainha.", "estípula."], "limbo.", ""),
+	new Question("As folhas são estruturas bastante versáteis em um vegetal, desempenhando os mais variados processos vitais. Analise as alternativas abaixo e marque aquela que não indica uma atividade que pode ser atribuída à folha:", ["As folhas realizam fotossíntese.", "As folhas realizam o processo de respiração.", "As folhas eliminam água no estado líquido pelo processo de gutação.", "As folhas absorvem água e sais minerais."], "As folhas absorvem água e sais minerais.", ""),
+	new Question("São organismos que apresentam dependência de água para a fecundação:", ["Pteridófitas e angiospermas.", "Briófitas e gimnospermas.", "Briófitas e pteridófitas.", "Gimnospermas e angiospermas."], "Briófitas e pteridófitas.", ""),
+	new Question("Dentre as opções abaixo, assinale aquela que NÃO corresponde a um anexo epidérmico dos vegetais:", ["Espinhos", "Acúleos;", "Estômatos;", "Tricomas"], "Espinhos", "")
 	],
 
+	//Fase 2
 	[
 	new Question("Na passagem evolutiva de plantas aquáticas (algas verdes) para o ambiente terrestre, alguns cientistas consideram as briófitas as primeiras a apresentarem características que permitiram que as plantas invadissem esse tipo de ambiente.</br>No referido grupo (briófitas), uma dessas características é o(a):", ["aparecimento da clorofila dando início ao processo de fotossíntese.", "surgimento de tecidos de condução.", "formação de sementes como o modo mais eficiente de propagãção.", "surgimento de rizoides, que assumiram as funções de absorção e fixação."], "surgimento de rizoides, que assumiram as funções de absorção e fixação.", ""),
 	new Question("São características das briófitas:", ["fase gametofítica dominante, esporófito dependente do gametófito, fecundação dependente da água.", "fase esporofítica dominante, gametófito dependente do esporófito, fecundação dependente da água.", "fase gametofítica dominante, esporófito independente do gametófito, fecundação independente da água.", "fase esporofítica dominante, gametófito independente do esporófito, fecundação independente da água."], "fase gametofítica dominante, esporófito dependente do gametófito, fecundação dependente da água.", ""),
@@ -23,7 +62,55 @@ var fase = [
 	new Question("Considere as características relacionadas abaixo:</br>I.Grãos de pólen;</br>II.Sistema vascular;</br>III.Sementes;</br>IV.Fruto.</br>São características comuns às gimnospermas e angiospermas:", ["apenas I e III.", "apenas I e IV.", "II, III e IV.", "I, II e III."], "I, II e III.", ""),
 	new Question("O endosperma da semente de angiospermas contém:", ["Material genético de cada genitor em quantidades iguais.", "Somente material genético materno.", "Maior quantidade de material genético materno.", "Maior quantidade de material genético paterno."], "Maior quantidade de material genético materno.", ""),
 	new Question("Sabemos que a coifa é uma estrutura encontrada na extremidade da raiz. Ela é formada por células parenquimáticas vivas que revestem o órgão como se fossem um dedal. A respeito das funções dessa estrutura, marque a alternativa incorreta.", ["A coifa ajuda a raiz a penetrar no solo.", "A coifa protege o ápice da raiz do atrito com o solo.", "A coifa está relacionada com a proteção contra o ataque de micro-organismos.", "A coifa atua promovendo a absorção de água e de nutrientes."], "A coifa atua promovendo a absorção de água e de nutrientes.", ""),
-	new Question("A figura abaixo mostra várias folhas de milho. Observe que elas apresentam uma porção terminal bastante desenvolvida que abraça o caule. Essa estrutura é denominada de:", ["pecíolo.", "limbo.", "bainha.", "estípula."], "bainha.", "fase2-q10.png")
+	new Question("A figura abaixo mostra várias folhas de milho. Observe que elas apresentam uma porção terminal bastante desenvolvida que abraça o caule. Essa estrutura é denominada de:", ["pecíolo.", "limbo.", "bainha.", "estípula."], "bainha.", "fase2-q10.png"),
+	new Question("Na passagem evolutiva de plantas aquáticas (algas verdes) para o ambiente terrestre, alguns cientistas consideram as briófitas as primeiras a apresentarem características que permitiram que as plantas invadissem esse tipo de ambiente. No referido grupo (briófitas), uma dessas características é o(a):", ["", "", "", ""], "", ""),
+	new Question("Considere as características relacionadas abaixo:</br>I.	Grãos de pólen;</br>II.	Sistema vascular;</br>III.	Sementes;</br>IV.	Fruto.</br>São características comuns às gimnospermas e angiospermas:", ["apenas I e III.", "apenas I e IV.", "II, III e IV.", "I, II e III."], "I, II e III.", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", "")
 	]
+
+	/*
+	
+	//Fase 3
+	[
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", "")
+	],
+
+	//Fase 4
+	[
+	new Question("", ["", "", "", ""], "", ""),
+	new Question("", ["", "", "", ""], "", "")
+	]
+
+	*/
+
 ];
 
