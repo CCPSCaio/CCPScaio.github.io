@@ -10,7 +10,7 @@ var sorteados = [];
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount = 1;
-var maxQuestions = 20;
+var maxQuestions = 41;
 
 //level do game
 var level = 0;
