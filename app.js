@@ -27,13 +27,13 @@ window.onload = function() {
     
     setInterval(function () {
         document.getElementById("timer").innerHTML = width;
-        if (width >= 100) {
+        if (width >= 300) {
             width = 0;
             //clearInterval(id);
             questionCount++;
             populate();
         } else {
-          width++; 
+          width+= 10; 
           elem.style.width = width/3 + '%'; 
         }
       }, 1000);
