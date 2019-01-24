@@ -10,7 +10,7 @@ var sorteados = [];
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount = 1;
-var maxQuestions = 20;
+var maxQuestions = 41;
 
 //level do game
 var level = 0;
@@ -27,13 +27,13 @@ window.onload = function() {
     
     setInterval(function () {
         document.getElementById("timer").innerHTML = width;
-        if (width >= 100) {
+        if (width >= 300) {
             width = 0;
             //clearInterval(id);
             questionCount++;
             populate();
         } else {
-          width++; 
+          width+= 10; 
           elem.style.width = width/3 + '%'; 
         }
       }, 1000);
