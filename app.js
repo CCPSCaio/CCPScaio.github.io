@@ -10,7 +10,7 @@ var sorteados = [];
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount = 1;
-var maxQuestions = 41;
+var maxQuestions = 1;
 
 //level do game
 var level = 0;
@@ -20,6 +20,9 @@ var width = 0;
 
 //placar
 var score = 0;
+
+//Condicao para a funcao de resposta funcionar
+var condition = true;
 
 //preenche a barra de carregamento
 window.onload = function() {
@@ -79,6 +82,7 @@ function populate(){
             guess("btn"+i,choices[i]);
         };
         showProgress();
+        condition = true;
     }
 };
 
@@ -86,15 +90,23 @@ function populate(){
 function guess(id,guess){
     var button=document.getElementById(id);
     button.onclick=function(){
-        width = 0;
-        questionCount++;
-
-        if(quiz.getQuestionIndex().answer == guess){
-            score++;
-        }
-
+        //width = 0;
+        //questionCount++;
+        if(condition = true){
+            for(var i=0;i<4;i++){
+                document.getElementById("btn"+i).className = "btn-large disabled"
+            }
+            
+            if(quiz.getQuestionIndex().answer == guess){
+                score++;
+                document.getElementById(id).className = "btn-large green";
+            } else {
+                document.getElementById(id).className = "btn-large red";
+            }
+        }   
+        condition = false;
         quiz.guess(guess);
-        populate();
+        //populate();
     }
 };
 

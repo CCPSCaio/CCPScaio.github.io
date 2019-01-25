@@ -19,3 +19,11 @@
 	padding: 40px;
 }
 /*Alternativas*/
+
+.correct{
+	background-color: green;
+}
+
+.wrong{
+	background-color: red;
+}
