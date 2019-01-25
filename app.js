@@ -10,7 +10,7 @@ var sorteados = [];
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount = 1;
-var maxQuestions = 1;
+var maxQuestions = 41;
 
 //level do game
 var level = 0;
@@ -96,7 +96,7 @@ function guess(id,guess){
             for(var i=0;i<4;i++){
                 document.getElementById("btn"+i).className = "btn-large disabled"
             }
-            
+
             if(quiz.getQuestionIndex().answer == guess){
                 score++;
                 document.getElementById(id).className = "btn-large green";
