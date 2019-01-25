@@ -100,8 +100,11 @@ function guess(id,guess){
 
 function showProgress(){
     var currentQuestionNumber=quiz.questionIndex+1;
+    var currentLevel = level+1;
     var element=document.getElementById("progress");
     element.innerHTML="Questão "+ questionCount+" de "+maxQuestions;
+    var element=document.getElementById("level");
+    element.innerHTML = "Fase " + currentLevel;
 
     //element=document.getElementById("skip");
     //element.innerHTML="Pula para a próxima questão. Restam " + skip;
