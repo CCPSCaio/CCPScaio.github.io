@@ -106,7 +106,6 @@ function guess(id,guess){
         }   
         condition = false;
         quiz.guess(guess);
-        //populate();
     }
 };
 
