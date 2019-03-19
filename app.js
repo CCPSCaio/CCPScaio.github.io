@@ -10,7 +10,7 @@ var sorteados = [];
 var order;
 //contador de questoes e numero maximo de questoes
 var questionCount = 1;
-var maxQuestions = 41;
+var maxQuestions = 0;
 
 //level do game
 var level = 0;
@@ -124,9 +124,17 @@ function showProgress(){
 };
 
 //mostra o placar ao final do game
+//TODO: Mudar o nome da função para um mais apropriado!
 function showScores(){
+    /*
     var gameOver="<h3>Fim do jogo!</h3>";
-    gameOver+="<h2 id='score'> Você acertou "+score+" de "+maxQuestions+"</h2>";
+    gameOver+="<h2 id='score'> Você acertou "+score+" de "+maxQuestions+"</h2> ";
+    */
+    var gameOver = "<div id = 'final_screen'> <div class='row'> <div class='col s12 m12'> <div class='card-panel teal'> <span class='white-text'>";
+    gameOver += "<center> <h3>Fim do jogo!</h3>"
+    gameOver += "<h2 id='score'> Você acertou "+score+" de "+maxQuestions+"</h2> </center>";
+    gameOver += "</span> </div> </div> </div> </div>";
+    
     var element=document.getElementById("quiz");
     element.innerHTML=gameOver;
 };
@@ -191,5 +199,7 @@ function skipQuestion(){
 //armazena as perguntas do arquivo -questoes.js
 var quiz = new Quiz(fase[level]);
 
+
 populate();
+
 showProgress();
