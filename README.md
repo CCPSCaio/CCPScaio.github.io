@@ -10,5 +10,6 @@ Quiz de botânica, dividido em fases.
 
 * **Caio Couto** - [CaioCouto](https://github.com/CCPSCaio)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Veja também os outros contribuidores [contribuidores] (https://github.com/CCPSCaio/CCPScaio.github.io/graphs/contributors) que participaram neste projeto.
+
 
